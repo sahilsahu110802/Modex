@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modex</title>
+  </head>
+  <style>
+    .popup {
+      min-width: 344px;
+      min-height: 188px;
+      background: url("https://media3.giphy.com/media/xUPGcshrKRahaS8ef6/giphy.gif?cid=ecf05e47chvr3hdfmm27kjmlp2pgf5fqp0ggc443yayxmyln&rid=giphy.gif&ct=g");
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .left {
+      color: white;
+    }
+    .right {
+      color: rgb(0, 174, 255);
+      font-size: 1.8rem;
+      margin-left: 2px;
+    }
+
+    p {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      line-height: 1.5;
+      width: 60%;
+      margin: auto;
+      font-size: 0.9rem;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      color: rgb(187, 187, 187);
+    }
+
+    .button {
+      display: block;
+      margin: auto;
+      background-color: rgba(119, 119, 119, 0.3);
+      position: relative;
+      height: 2rem;
+      width: 4rem;
+      border-radius: 25px;
+      color: white;
+      transition: 1s;
+      font-family: "Raleway", sans-serif;
+    }
+
+    .half {
+      position: absolute;
+      width: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      background-color: rgb(0, 162, 255);
+      pointer-events: none;
+      transition: 1s;
+    }
+
+    @keyframes moveCircleRight {
+      0% {
+        left: 0;
+        transform: translateX(0);
+      }
+
+      100% {
+        left: 100%;
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes moveCircleLeft {
+      0% {
+        left: 100%;
+        transform: translateX(-100%);
+      }
+
+      100% {
+        left: 0;
+        transform: translateX(0);
+
+      }
+    }
+  </style>
+
+  <body>
+    <div class="popup">
+      <h1><span class="left"> Mode</span><span class="right">x</span></h1>
+      <p>Hey this is Modex, switch to dark mode and back</p>
+
+      <div class="button">
+        <div class="half" style="left: 5px">Off</div>
+        <div class="half" style="right: 5px; text-align: right">On</div>
+        <div class="circle"></div>
+      </div>
+    </div>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>
